@@ -1,5 +1,4 @@
 # Randomizes the chunk described by storage chunkrand:tmp c (dim, bx, bz).
-scoreboard players remove #budget chunkrand 1
 function chunkrand:chunk/mark with storage chunkrand:tmp c
 
 execute store result score #t chunkrand run data get storage chunkrand:tmp c.bx
@@ -18,3 +17,4 @@ execute store result storage chunkrand:tmp c.i int 1 run scoreboard players get 
 function chunkrand:chunk/pick with storage chunkrand:tmp c
 
 function chunkrand:chunk/fill with storage chunkrand:tmp c
+function chunkrand:chunk/free_players with storage chunkrand:tmp c
